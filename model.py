@@ -37,7 +37,7 @@ def dell_contact(int: int):
     phone_book.pop(int)
 
 def erase_phone_book():
-    del phone_book[:]
+    phone_book.clear()
 
-def save_phone_book():
+def save_phone_book_exit(file, phone_book):
     pass

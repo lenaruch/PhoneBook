@@ -10,8 +10,9 @@ def start():
             case 1:  # Открыть файл
                 model.open_file()
                 print_message(text.open_succesful)
-            case 2:  # Сохранить файл
-                pass
+            case 2:  # Очистка файла
+                model.erase_phone_book()
+                print_message(text.file_erased)
             case 3:  # Показать все контакты
                 show_contacts(model.phone_book)
                 print_message(text.show_succesful)
@@ -39,7 +40,8 @@ def start():
                 index = int(input_return(text.input_index_dell))
                 model.dell_contact(int(index)-1)
                 print_message(text.delited_contact)
-            case 8: # Очистка телефонной книги
+            case 8:  # Сохранить и выйти
                 pass
-            case 9:  # Выход
-                break  # Выход из цикла while True через функцию break
+            case 9:  # Выход без сохранения
+                exit()  # Выход из цикла while True через функцию exit()
+                # break  # Можно выйти и через break функцию
