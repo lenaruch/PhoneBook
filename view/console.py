@@ -38,3 +38,5 @@ def input_contact(message: str) -> dict[str,str]:
 
 def input_return(message: str) -> str:
     return input(message)
+
+
