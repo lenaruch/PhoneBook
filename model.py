@@ -33,8 +33,9 @@ def change(index: int, new: dict[str,str]):
         if field != '':
             phone_book[index-1][key] = field
 
-#def dell_contact(int: int) -> int:
-#    del phone_book[int-1]
-
 def dell_contact(int: int) -> int:
-    phone_book.pop(int-1)
+    delited = phone_book.pop
+    phone_book.pop(int)
+
+def save_phone_book():
+    pass

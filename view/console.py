@@ -3,12 +3,12 @@ from .text import *
 
 # Функция по выводу меню с контролем ввода цифры от 1 до 8
 def menu() -> int:
-    print('+'*len(main_menu)) # Обрамление меню сверху +
+    print('+'*28) # Обрамление меню сверху +
     print(main_menu)
-    print('+' * len(main_menu) + '\n') # Обрамление меню снизу +
+    print('+' * 28 + '\n') # Обрамление меню снизу +
     while True:
         choice = input(menu_choice)
-        if choice.isdigit() and 0 < int(choice) < 9:
+        if choice.isdigit() and 0 < int(choice) < 10:
             return int(choice)
         print(input_error)
 

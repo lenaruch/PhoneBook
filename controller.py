@@ -37,7 +37,9 @@ def start():
                 result = model.saerch(word)
                 show_contacts(result)
                 index = int(input_return(text.input_index_dell))
-                model.dell_contact(int(index))
+                model.dell_contact(int(index)-1)
                 print_message(text.delited_contact)
-            case 8:  # Выход
+            case 8: # Очистка телефонной книги
+                pass
+            case 9:  # Выход
                 break  # Выход из цикла while True через функцию break
