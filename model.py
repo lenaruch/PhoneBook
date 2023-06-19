@@ -2,7 +2,7 @@ phone_book = []
 path = 'phones.txt'
 
 def open_file():
-    with open(path, 'r', encoding='UTF-8') as file:
+    with open(path, 'r+', encoding='UTF-8') as file:
         data = file.readlines()
     for contact in data:
         user_id, name, phone, comment, *_ = contact.strip().split(':')
@@ -32,3 +32,9 @@ def change(index: int, new: dict[str,str]):
     for key, field in new.items():
         if field != '':
             phone_book[index-1][key] = field
+
+#def dell_contact(int: int) -> int:
+#    del phone_book[int-1]
+
+def dell_contact(int: int) -> int:
+    phone_book.pop(int-1)

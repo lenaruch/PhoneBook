@@ -33,6 +33,11 @@ def start():
                 old_name = model.phone_book[int(index)-1].get('name')
                 print_message(text.contact_changed(new.get('name') if new.get('name') else old_name))
             case 7:  # Удалить контакт
-                pass
+                word = input_return(text.input_del_contact)
+                result = model.saerch(word)
+                show_contacts(result)
+                index = int(input_return(text.input_index_dell))
+                model.dell_contact(int(index))
+                print_message(text.delited_contact)
             case 8:  # Выход
                 break  # Выход из цикла while True через функцию break
